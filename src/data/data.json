@@ -1,0 +1,235 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "customer": "Savannah Nguyen",
+      "date": "Sep 20, 2024 21:04",
+      "product": "Cowl neck sweater",
+      "status": "Pending",
+      "email": "sara.cruz@example.com",
+      "amount": "$14.81",
+      "paymentMethod": "VISA ****5858"
+    },
+    {
+      "id": 2,
+      "customer": "Robert Chen",
+      "date": "Oct 15, 2024 13:22",
+      "product": "Denim jacket",
+      "status": "Approved",
+      "email": "robert.chen@example.com",
+      "amount": "$89.99",
+      "paymentMethod": "VISA ****4321"
+    },
+    {
+      "id": 3,
+      "customer": "Emma Thompson",
+      "date": "Oct 02, 2024 09:15",
+      "product": "Floral dress",
+      "status": "Approved",
+      "email": "emma.t@example.com",
+      "amount": "$45.50",
+      "paymentMethod": "VISA ****1234"
+    },
+    {
+      "id": 4,
+      "customer": "Marcus Johnson",
+      "date": "Sep 28, 2024 16:45",
+      "product": "Leather boots",
+      "status": "Rejected",
+      "email": "m.johnson@example.com",
+      "amount": "$129.99",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 5,
+      "customer": "Sofia Rodriguez",
+      "date": "Oct 12, 2024 11:30",
+      "product": "Silk scarf",
+      "status": "Approved",
+      "email": "sofia.r@example.com",
+      "amount": "$29.95",
+      "paymentMethod": "AMEX ****4567"
+    },
+    {
+      "id": 6,
+      "customer": "Lucas Kim",
+      "date": "Oct 18, 2024 14:20",
+      "product": "Cargo pants",
+      "status": "Pending",
+      "email": "lucas.kim@example.com",
+      "amount": "$55.00",
+      "paymentMethod": "AMEX ****4567"
+    },
+    {
+      "id": 7,
+      "customer": "Isabella Garcia",
+      "date": "Sep 25, 2024 10:10",
+      "product": "Summer hat",
+      "status": "Approved",
+      "email": "i.garcia@example.com",
+      "amount": "$19.99",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 8,
+      "customer": "William Taylor",
+      "date": "Oct 05, 2024 17:55",
+      "product": "Graphic t-shirt",
+      "status": "Rejected",
+      "email": "w.taylor@example.com",
+      "amount": "$24.50",
+      "paymentMethod": "AMEX ****4567"
+    },
+    {
+      "id": 9,
+      "customer": "Olivia Brown",
+      "date": "Oct 08, 2024 12:40",
+      "product": "Yoga pants",
+      "status": "Pending",
+      "email": "o.brown@example.com",
+      "amount": "$34.99",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 10,
+      "customer": "Alexander Lee",
+      "date": "Sep 30, 2024 15:15",
+      "product": "Winter coat",
+      "status": "Pending",
+      "email": "alex.lee@example.com",
+      "amount": "$159.99",
+      "paymentMethod": "AMEX ****4567"
+    },
+    {
+      "id": 11,
+      "customer": "Mia Patel",
+      "date": "Oct 14, 2024 08:30",
+      "product": "Sundress",
+      "status": "Approved",
+      "email": "mia.p@example.com",
+      "amount": "$49.99",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 12,
+      "customer": "Daniel Wilson",
+      "date": "Oct 01, 2024 19:25",
+      "product": "Running shoes",
+      "status": "Approved",
+      "email": "d.wilson@example.com",
+      "amount": "$79.95",
+      "paymentMethod": "AMEX ****4567"
+    },
+    {
+      "id": 13,
+      "customer": "Ava Martinez",
+      "date": "Oct 11, 2024 13:50",
+      "product": "Beanie hat",
+      "status": "Rejected",
+      "email": "ava.m@example.com",
+      "amount": "$15.99",
+      "paymentMethod": "VISA ****1234"
+    },
+    {
+      "id": 14,
+      "customer": "Noah Anderson",
+      "date": "Oct 17, 2024 16:05",
+      "product": "Hoodie",
+      "status": "Pending",
+      "email": "n.anderson@example.com",
+      "amount": "$44.99",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 15,
+      "customer": "Charlotte Wong",
+      "date": "Sep 22, 2024 11:45",
+      "product": "Midi skirt",
+      "status": "Approved",
+      "email": "c.wong@example.com",
+      "amount": "$39.50",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 16,
+      "customer": "Ethan Davis",
+      "date": "Oct 09, 2024 14:35",
+      "product": "Baseball cap",
+      "status": "Rejected",
+      "email": "e.davis@example.com",
+      "amount": "$19.95",
+      "paymentMethod": "AMEX ****4567"
+    },
+    {
+      "id": 17,
+      "customer": "Sophia Miller",
+      "date": "Oct 16, 2024 10:20",
+      "product": "Cardigan",
+      "status": "Pending",
+      "email": "s.miller@example.com",
+      "amount": "$65.00",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 18,
+      "customer": "James Smith",
+      "date": "Sep 27, 2024 18:15",
+      "product": "Jeans",
+      "status": "Approved",
+      "email": "j.smith@example.com",
+      "amount": "$69.99",
+      "paymentMethod": "AMEX ****4567"
+    },
+    {
+      "id": 19,
+      "customer": "Luna Chang",
+      "date": "Oct 03, 2024 12:55",
+      "product": "Ankle boots",
+      "status": "Pending",
+      "email": "luna.c@example.com",
+      "amount": "$95.00",
+      "paymentMethod": "Mastercard ****9876"
+    },
+    {
+      "id": 20,
+      "customer": "Benjamin Moore",
+      "date": "Oct 07, 2024 15:40",
+      "product": "Polo shirt",
+      "status": "Rejected",
+      "email": "b.moore@example.com",
+      "amount": "$32.99",
+      "paymentMethod": "AMEX ****4567"
+    }
+  ],
+
+  "cards": [
+    {
+      "id": 1,
+      "title": "Total Revenue",
+      "amount": "$13,782.22",
+      "historicalAmount": "$2,403",
+      "result": "positive"
+    },
+    {
+      "id": 2,
+      "title": "Sales",
+      "amount": "$7,882.78",
+      "historicalAmount": "$2,403",
+      "result": "positive"
+    },
+    {
+      "id": 3,
+      "title": "Active Now",
+      "amount": "",
+      "historicalAmount": "",
+      "result": null
+    },
+    {
+      "id": 4,
+      "title": "Subscriptors",
+      "amount": "+9",
+      "historicalAmount": "-250",
+      "result": "negative"
+    }
+  ]
+}

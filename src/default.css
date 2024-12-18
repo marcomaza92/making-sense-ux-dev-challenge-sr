@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  color: var(--main);
+}
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--neutral-gray-100);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+}

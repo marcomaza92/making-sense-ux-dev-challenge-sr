@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.75rem;
+  height: 1.5rem;
+  max-width: fit-content;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &.approved {
+    background-color: var(--success);
+    color: var(--text-contrast);
+  }
+
+  &.pending {
+    background-color: var(--warning);
+    color: var(--text-contrast);
+  }
+
+  &.rejected {
+    background-color: var(--error);
+    color: var(--text);
+  }
+}

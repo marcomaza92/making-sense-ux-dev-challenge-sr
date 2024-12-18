@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+figure,
+blockquote {
+  margin-inline: unset;
+}
+
+/* type */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-block: 1.75rlh 0.25rlh;
+}
+
+ul,
+ol {
+  padding-inline-start: 2ch;
+}
+
+ul,
+ol,
+p {
+  margin-block: 0.75rlh;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+hr {
+  border-style: solid;
+  border-width: medium 0 0;
+  color: inherit;
+  height: 0;
+  margin-block: 2lh;
+  margin-inline: unset;
+  overflow: visible;
+  pointer-events: none;
+}
+
+header * {
+  margin: unset;
+}
+
+[no-style] {
+  display: none !important;
+}
+
+/* media */
+picture {
+  display: contents;
+}
+
+source,
+audio:not([controls]) {
+  display: none;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-inline-size: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  block-size: auto;
+}
+
+[alt] {
+  font-style: italic;
+}
+audio {
+  width: 100%;
+}
+
+/* forms */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: smaller;
+}
+
+:focus-visible {
+  outline: medium dashed var(--main, currentColor);
+  outline-offset: 2px;
+}
+
+main,
+nav {
+  &:focus-visible {
+    outline: 0;
+  }
+}
+
+/* a11y */
+[hidden] {
+  display: none !important;
+}
+
+[aria-pressed="true"] {
+  box-shadow: 1px 1px 0 SelectedItem;
+}
+
+.visually-hidden:not(:focus-within):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

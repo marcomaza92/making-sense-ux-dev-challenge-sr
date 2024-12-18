@@ -1,0 +1,49 @@
+html {
+  --background: hsla(0, 0%, 100%, 1);
+  --foreground: hsla(0, 0%, 0%, 1);
+
+  --neutral-gray-50: hsla(0, 0%, 98%, 1);
+  --neutral-gray-100: hsla(0, 0%, 96%, 0.73);
+  --neutral-gray-200: hsla(0, 0%, 93%, 1);
+  --neutral-gray-300: hsla(0, 0%, 88%, 1);
+  --neutral-gray-400: hsla(0, 0%, 74%, 1);
+  --neutral-gray-500: hsla(0, 0%, 62%, 1);
+  --neutral-gray-600: hsla(0, 0%, 46%, 1);
+  --neutral-gray-700: hsla(0, 0%, 38%, 1);
+  --neutral-gray-800: hsla(0, 0%, 26%, 1);
+  --neutral-gray-900: hsla(0, 0%, 13%, 1);
+
+  --main: hsla(203, 52%, 13%, 1);
+
+  --success: hsla(155, 87%, 43%, 1);
+  --warning: hsla(30, 100%, 63%, 1);
+  --error: hsla(3, 57%, 52%, 1);
+
+  --text: hsla(90, 6%, 7%, 1);
+  --text-contrast: hsla(0, 0%, 98%, 1);
+
+  --shadow: hsla(0, 0%, 0%, 0.2);
+
+  &.dark {
+    --background: hsla(0, 0%, 0%, 1);
+    --foreground: hsla(0, 0%, 100%, 1);
+
+    --neutral-gray-50: hsla(0, 0%, 11%, 1);
+    --neutral-gray-100: hsla(0, 0%, 16%, 1);
+    --neutral-gray-200: hsla(0, 0%, 20%, 1);
+    --neutral-gray-300: hsla(0, 0%, 29%, 1);
+    --neutral-gray-400: hsla(0, 0%, 36%, 1);
+    --neutral-gray-500: hsla(0, 0%, 46%, 1);
+    --neutral-gray-600: hsla(0, 0%, 62%, 1);
+    --neutral-gray-700: hsla(0, 0%, 74%, 1);
+    --neutral-gray-800: hsla(0, 0%, 88%, 1);
+    --neutral-gray-900: hsla(0, 0%, 93%, 1);
+
+    --main: hsla(0, 0%, 88%, 1);
+
+    --text: hsla(0, 0%, 98%, 1);
+    --text-contrast: hsla(90, 6%, 7%, 1);
+
+    --shadow: hsla(0, 0%, 0%, 0.5);
+  }
+}
