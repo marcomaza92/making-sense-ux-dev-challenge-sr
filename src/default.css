@@ -15,8 +15,23 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
   max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  #root {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-areas:
+      "header header"
+      "sidebar content";
+  }
+}
+
+@media (min-width: 1200px) {
 }

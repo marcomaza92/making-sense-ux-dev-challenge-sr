@@ -103,6 +103,7 @@ button,
 textarea,
 select {
   font-family: inherit;
+  /* this should be controlled in a form-control component */
   font-size: smaller;
 }
 

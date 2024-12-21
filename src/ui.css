@@ -1,4 +1,5 @@
 main {
+  grid-area: content;
   background-color: var(--neutral-gray-50);
   border-radius: 1.5rem;
   border: 1px solid var(--neutral-gray-300);

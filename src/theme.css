@@ -2,8 +2,48 @@ html {
   --background: hsla(0, 0%, 100%, 1);
   --foreground: hsla(0, 0%, 0%, 1);
 
+  --primary-main: hsla(155, 87%, 43%, 1);
+  --primary-light: hsl(149, 100%, 83%, 1);
+  --primary-dark: hsla(155, 100%, 22%, 1);
+  --primary-text-contrast: hsla(90, 6%, 7%, 1);
+
+  --secondary-main: hsla(189, 59%, 57%, 1);
+  --secondary-light: hsla(189, 100%, 90%, 1);
+  --secondary-dark: hsla(188, 61%, 27%, 1);
+  --secondary-text-contrast: hsla(90, 6%, 7%, 1);
+
+  --custom1-main: hsla(254, 85%, 71%, 1);
+  --custom1-light: hsla(245, 72%, 87%, 1);
+  --custom1-dark: hsla(254, 60%, 33%, 1);
+  --custom1-text-contrast: hsla(90, 6%, 7%, 1);
+
+  --custom2-main: hsla(203, 52%, 13%, 1);
+  --custom2-light: hsla(203, 51%, 20%, 1);
+  --custom2-dark: hsla(205, 59%, 6%, 1);
+  --custom2-text-contrast: hsla(0, 0%, 98%, 1);
+
+  --warning-main: hsla(30, 100%, 63%, 1);
+  --warning-light: hsla(41, 81%, 80%, 1);
+  --warning-dark: hsla(30, 85%, 34%, 1);
+  --warning-text-contrast: hsla(90, 6%, 7%, 1);
+
+  --success-main: hsla(155, 87%, 43%, 1);
+  --success-light: hsla(149, 100%, 83%, 1);
+  --success-dark: hsla(155, 100%, 22%, 1);
+  --success-text-contrast: hsla(90, 6%, 7%, 1);
+
+  --error-main: hsla(3, 57%, 52%, 1);
+  --error-light: hsla(3, 91%, 77%, 1);
+  --error-dark: hsla(3, 86%, 27%, 1);
+  --error-text-contrast: hsla(0, 0%, 98%, 1);
+
+  --info-main: hsla(189, 59%, 57%, 1);
+  --info-light: hsla(189, 100%, 90%, 1);
+  --info-dark: hsla(188, 61%, 27%, 1);
+  --info-text-contrast: hsla(90, 6%, 7%, 1);
+
   --neutral-gray-50: hsla(0, 0%, 98%, 1);
-  --neutral-gray-100: hsla(0, 0%, 96%, 0.73);
+  --neutral-gray-100: hsla(0, 0%, 96%, 1);
   --neutral-gray-200: hsla(0, 0%, 93%, 1);
   --neutral-gray-300: hsla(0, 0%, 88%, 1);
   --neutral-gray-400: hsla(0, 0%, 74%, 1);
@@ -13,16 +53,42 @@ html {
   --neutral-gray-800: hsla(0, 0%, 26%, 1);
   --neutral-gray-900: hsla(0, 0%, 13%, 1);
 
-  --main: hsla(203, 52%, 13%, 1);
+  --shadow-main: hsla(0, 0%, 0%, 0.2);
 
-  --success: hsla(155, 87%, 43%, 1);
-  --warning: hsla(30, 100%, 63%, 1);
-  --error: hsla(3, 57%, 52%, 1);
+  --gradient-main-start: hsla(155, 87%, 43%, 1);
+  --gradient-main-end: hsla(189, 59%, 57%, 1);
 
-  --text: hsla(90, 6%, 7%, 1);
-  --text-contrast: hsla(0, 0%, 98%, 1);
+  /*
+    More on Fluid Typography:
+    
+    - https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/
+    - https://modern-fluid-typography.vercel.app/
+  */
 
-  --shadow: hsla(0, 0%, 0%, 0.2);
+  --font-preferred-value: 2vw;
+  --font-ratio: 2rem;
+
+  --font-heading-1-min: 2.5rem;
+  --font-heading-2-min: 2rem;
+  --font-heading-3-min: 1.75rem;
+  --font-heading-4-min: 1.5rem;
+  --font-heading-5-min: 1.25rem;
+  --font-heading-6-min: 1.125rem;
+  --font-subtitle-1-min: 1rem;
+  --font-body-1-min: 1rem;
+  --font-body-2-min: 0.875rem;
+  --font-caption-min: 0.75rem;
+
+  --font-heading-1-max: 4.5rem;
+  --font-heading-2-max: 3.75rem;
+  --font-heading-3-max: 3rem;
+  --font-heading-4-max: 2.25rem;
+  --font-heading-5-max: 1.5rem;
+  --font-heading-6-max: 1.25rem;
+  --font-subtitle-1-max: 1.125rem;
+  --font-body-1-max: 1rem;
+  --font-body-2-max: 0.875rem;
+  --font-caption-max: 0.75rem;
 
   &.dark {
     --background: hsla(0, 0%, 0%, 1);
@@ -39,11 +105,6 @@ html {
     --neutral-gray-800: hsla(0, 0%, 88%, 1);
     --neutral-gray-900: hsla(0, 0%, 93%, 1);
 
-    --main: hsla(0, 0%, 88%, 1);
-
-    --text: hsla(0, 0%, 98%, 1);
-    --text-contrast: hsla(90, 6%, 7%, 1);
-
-    --shadow: hsla(0, 0%, 0%, 0.5);
+    --shadow-main: hsla(0, 0%, 0%, 0.5);
   }
 }

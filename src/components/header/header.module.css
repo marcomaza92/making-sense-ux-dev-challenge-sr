@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+  .header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+  }
+}
