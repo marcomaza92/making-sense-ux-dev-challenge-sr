@@ -1,11 +1,11 @@
 import clsx from "clsx";
-import type { ProductStatusProps } from "../table/table";
-import styles from "./status.module.css";
+import styles from "./Status.module.css";
 import {
   CheckCircleIcon,
   ExclamationCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
+import type { ProductStatusProps } from "../Table/Table.types";
 
 const getStatusStyles = (status: ProductStatusProps) => {
   return clsx(styles.container, {

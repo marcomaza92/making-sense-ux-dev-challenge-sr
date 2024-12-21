@@ -6,7 +6,7 @@ import Root from "./routes/root";
 import "./index.css";
 import { Dashboard } from "./routes/dashboard";
 import { Orders } from "./routes/orders";
-import { Tabs } from "./components/tabs/tabs";
+import { Tabs } from "./components/molecules/Tabs/Tabs";
 import { Messages } from "./routes/messages";
 
 const router = createBrowserRouter([
@@ -39,5 +39,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 );

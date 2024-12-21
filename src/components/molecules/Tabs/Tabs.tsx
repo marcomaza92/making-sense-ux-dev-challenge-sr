@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import classes from "./tabs.module.css";
+import classes from "./Tabs.module.css";
 
 export const Tabs = () => (
   <>

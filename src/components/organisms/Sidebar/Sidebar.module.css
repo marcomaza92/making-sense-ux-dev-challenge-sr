@@ -5,34 +5,12 @@
   transition: width 0.25s;
   padding-right: 1rem;
 
-  ul {
+  .navList {
     list-style: none;
     padding: 0;
-
-    .navigation {
-      margin-bottom: 0.5rem;
-      display: flex;
-      font-size: 0.75rem;
-      padding: 0.75rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      color: var(--text);
-      gap: 0.5rem;
-      align-items: center;
-
-      svg {
-        width: 1rem;
-        height: 1rem;
-      }
-
-      &[aria-current="page"] {
-        background-color: var(--main);
-        color: var(--text-contrast);
-      }
-    }
   }
 
-  button {
+  .collapse {
     appearance: none;
     background-color: transparent;
     border: none;
@@ -51,16 +29,16 @@
     width: 64px;
     align-items: center;
 
-    span {
+    .collapseLabel {
       display: none;
     }
 
-    button {
+    .collapse {
       justify-content: center;
       svg {
         transform: rotate(180deg);
       }
-      span {
+      .collapseLabel {
         display: none;
       }
     }

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { Toggle } from "../toggle/toggle";
-import styles from "./header.module.css";
+import { Toggle } from "../../molecules/Toggle/Toggle";
+import styles from "./Header.module.css";
+import Avatar from "../../molecules/Avatar/Avatar";
 
 export const Header = () => {
-  const user = "Robert";
   return (
     <header className={styles.header}>
       <Link to={`/`}>
@@ -13,10 +13,7 @@ export const Header = () => {
         <div>
           <Toggle />
         </div>
-        <div>
-          <img src="user.png" alt="User Avatar" />
-          <p>Hi, {user}!</p>
-        </div>
+        <Avatar />
       </div>
     </header>
   );

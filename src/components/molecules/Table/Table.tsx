@@ -7,23 +7,8 @@ import {
   SortingState,
   useReactTable,
 } from "@tanstack/react-table";
-
-export type ProductStatusProps = "Approved" | "Pending" | "Rejected";
-
-export type ProductProps = {
-  id: number;
-  customer: string;
-  date: string;
-  product: string;
-  status: ProductStatusProps;
-  email: string;
-  amount: string;
-  paymentMethod: string;
-};
-
-type Props = {
-  data: ProductProps[];
-};
+import type { ProductProps, TableProps } from "./Table.types";
+import Row from "../Row/Row";
 
 const defaultColumns: ColumnDef<ProductProps>[] = [
   {
@@ -48,7 +33,8 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
   },
 ];
 
-export const Table = ({ data }: Props) => {
+export const Table = (props: TableProps) => {
+  const { data } = props;
   const [columns] = React.useState(() => [...defaultColumns]);
 
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -82,7 +68,7 @@ export const Table = ({ data }: Props) => {
                     ? null
                     : flexRender(
                         header.column.columnDef.header,
-                        header.getContext(),
+                        header.getContext()
                       )}
                 </th>
               ))}
@@ -91,13 +77,7 @@ export const Table = ({ data }: Props) => {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
-            </tr>
+            <Row key={row.id} row={row} />
           ))}
         </tbody>
       </table>

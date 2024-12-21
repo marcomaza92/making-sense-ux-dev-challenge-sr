@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import styles from "./toggle.module.css";
+import styles from "./Toggle.module.css";
 import clsx from "clsx";
 
 export const Toggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("darkMode") === "true",
+    localStorage.getItem("darkMode") === "true"
   );
 
   useEffect(() => {

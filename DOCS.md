@@ -54,3 +54,5 @@
 
 - Add mobile-first on the existing base layout
 - Update design tokens for fonts, colors and gradients
+- Add atomic design structure for components
+- Refactor types outside UI
