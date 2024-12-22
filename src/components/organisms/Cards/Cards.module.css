@@ -1,0 +1,24 @@
+.cards {
+  display: flex;
+  width: calc(var(--cardsWidth) - 4rem);
+  gap: 1rem;
+  padding-block-end: 1rem;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scroll-snap-type: x mandatory;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards {
+    flex-wrap: nowrap;
+  }
+}

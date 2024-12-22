@@ -26,6 +26,14 @@ em {
   );
 }
 
+.heading4 {
+  font-size: clamp(
+    var(--font-heading4-min),
+    var(--font-preferred-value) + var(--font-ratio),
+    var(--font-heading4-max)
+  );
+}
+
 .regular {
   font-weight: var(--font-weight-regular);
 }

@@ -208,6 +208,7 @@
       "title": "Total Revenue",
       "amount": "$13,782.22",
       "historicalAmount": "$2,403",
+      "timePeriod": "today",
       "result": "positive"
     },
     {
@@ -215,6 +216,7 @@
       "title": "Sales",
       "amount": "$7,882.78",
       "historicalAmount": "$2,403",
+      "timePeriod": "today",
       "result": "positive"
     },
     {
@@ -222,6 +224,7 @@
       "title": "Active Now",
       "amount": "",
       "historicalAmount": "",
+      "timePeriod": "since last hour",
       "result": null
     },
     {
@@ -229,6 +232,7 @@
       "title": "Subscriptors",
       "amount": "+9",
       "historicalAmount": "-250",
+      "timePeriod": "today",
       "result": "negative"
     }
   ]
