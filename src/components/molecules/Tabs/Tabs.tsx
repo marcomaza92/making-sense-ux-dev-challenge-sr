@@ -1,15 +1,12 @@
-import { NavLink, Outlet } from "react-router-dom";
-import classes from "./Tabs.module.css";
+import { Outlet } from "react-router-dom";
+import styles from "./Tabs.module.css";
+import Tab from "../Tab/Tab";
 
 export const Tabs = () => (
   <>
-    <ul className={classes.tabs}>
-      <li>
-        <NavLink to={`/`}>Dashboard</NavLink>
-      </li>
-      <li>
-        <NavLink to={`/orders`}>Orders</NavLink>
-      </li>
+    <ul className={styles.tabs}>
+      <Tab to={"/"} label={"Dashboard"} />
+      <Tab to={"/orders"} label={"Orders"} />
     </ul>
     <Outlet />
   </>

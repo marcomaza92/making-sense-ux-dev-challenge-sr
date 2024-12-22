@@ -65,6 +65,8 @@ html {
 
   --shadow-nav-item: rgba(0, 0, 0, 0.05);
 
+  --shadow-content: rgba(0, 0, 0, 0.07);
+
   --shadow-modal-content: hsla(0, 0%, 47%, 0.1);
 
   --overlay-main: hsla(0, 0%, 0%, 0.08);
@@ -89,26 +91,26 @@ html {
   --font-preferred-value: 2vw;
   --font-ratio: 2rem;
 
-  --font-heading-1-min: 2.5rem;
-  --font-heading-2-min: 2rem;
-  --font-heading-3-min: 1.75rem;
-  --font-heading-4-min: 1.5rem;
-  --font-heading-5-min: 1.25rem;
-  --font-heading-6-min: 1.125rem;
-  --font-subtitle-1-min: 1rem;
-  --font-body-1-min: 1rem;
-  --font-body-2-min: 0.875rem;
+  --font-heading1-min: 2.5rem;
+  --font-heading2-min: 2rem;
+  --font-heading3-min: 1.75rem;
+  --font-heading4-min: 1.5rem;
+  --font-heading5-min: 1.25rem;
+  --font-heading6-min: 1.125rem;
+  --font-subtitle1-min: 1rem;
+  --font-body1-min: 1rem;
+  --font-body2-min: 0.875rem;
   --font-caption-min: 0.75rem;
 
-  --font-heading-1-max: 4.5rem;
-  --font-heading-2-max: 3.75rem;
-  --font-heading-3-max: 3rem;
-  --font-heading-4-max: 2.25rem;
-  --font-heading-5-max: 1.5rem;
-  --font-heading-6-max: 1.25rem;
-  --font-subtitle-1-max: 1.125rem;
-  --font-body-1-max: 1rem;
-  --font-body-2-max: 0.875rem;
+  --font-heading1-max: 4.5rem;
+  --font-heading2-max: 3.75rem;
+  --font-heading3-max: 3rem;
+  --font-heading4-max: 2.25rem;
+  --font-heading5-max: 1.5rem;
+  --font-heading6-max: 1.25rem;
+  --font-subtitle1-max: 1.125rem;
+  --font-body1-max: 1rem;
+  --font-body2-max: 0.875rem;
   --font-caption-max: 0.75rem;
 
   &.dark {

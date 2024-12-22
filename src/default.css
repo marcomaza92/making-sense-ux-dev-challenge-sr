@@ -16,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
 }
 
@@ -26,6 +27,7 @@ img {
 @media (min-width: 768px) {
   #root {
     display: grid;
+    gap: 0;
     grid-template-columns: min-content auto;
     grid-template-rows: min-content auto;
     grid-template-areas:

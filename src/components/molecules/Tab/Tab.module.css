@@ -1,0 +1,15 @@
+.tab {
+  a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--neutral-gray-900);
+    display: flex;
+    justify-content: center;
+    min-width: 75px;
+
+    &[aria-current="page"] {
+      border-bottom: 2px solid var(--success-main);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}
