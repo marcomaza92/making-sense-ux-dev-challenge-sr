@@ -1,6 +1,6 @@
 .cards {
   display: flex;
-  width: calc(var(--cardsWidth) - 4rem);
+  width: calc(var(--cardsWidth) - 4rem - 1rem);
   gap: 1rem;
   padding-block-end: 1rem;
   overflow: auto;

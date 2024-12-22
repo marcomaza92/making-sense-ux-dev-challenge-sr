@@ -1,0 +1,37 @@
+.labelContainer {
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  border-radius: 24px;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.statusPending,
+.statusApproved,
+.statusRejected {
+  text-transform: uppercase;
+  box-shadow: 0px 0px 3px 0px var(--shadow-status) inset;
+}
+
+.statusPending {
+  background-color: var(--warning-main);
+  border: thin solid var(--warning-main);
+  color: var(--warning-text-contrast);
+}
+
+.statusRejected {
+  background-color: var(--error-main);
+  border: thin solid var(--error-main);
+  color: var(--error-text-contrast);
+}
+
+.statusApproved {
+  background-color: var(--success-main);
+  border: thin solid var(--success-main);
+  color: var(--success-text-contrast);
+}

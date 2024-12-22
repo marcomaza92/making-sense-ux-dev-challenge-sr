@@ -2,13 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./NavItem.module.css";
 import clsx from "clsx";
 import Text from "../../atoms/Text/Text";
-
-export interface NavItemProps {
-  to: string;
-  label: string;
-  className?: string;
-  icon: React.ReactElement;
-}
+import { NavItemProps } from "./NavItem.types";
 
 const NavItem = (props: NavItemProps) => {
   const { to, label, className, icon } = props;

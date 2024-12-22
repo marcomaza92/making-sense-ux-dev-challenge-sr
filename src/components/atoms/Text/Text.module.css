@@ -34,6 +34,14 @@ em {
   );
 }
 
+.heading5 {
+  font-size: clamp(
+    var(--font-heading5-min),
+    var(--font-preferred-value) + var(--font-ratio),
+    var(--font-heading5-max)
+  );
+}
+
 .regular {
   font-weight: var(--font-weight-regular);
 }
