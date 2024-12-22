@@ -24,17 +24,18 @@ export const Toggle = () => {
         onChange={() => setIsDarkMode(!isDarkMode)}
       />
       <label htmlFor="toggle" className={styles.checkboxLabel}>
+        <MoonIcon
+          className={clsx(styles.moonIcon, { [styles.active]: isDarkMode })}
+        />
+        <SunIcon
+          className={clsx(styles.sunIcon, { [styles.active]: !isDarkMode })}
+        />
         <span
           className={clsx(styles.ball, {
             [styles.animation]: isDarkMode,
           })}
-        >
-          {isDarkMode ? (
-            <MoonIcon className={styles.moonIcon} />
-          ) : (
-            <SunIcon className={styles.sunIcon} />
-          )}
-        </span>
+          aria-label="Dark Mode Toggle"
+        ></span>
       </label>
     </div>
   );

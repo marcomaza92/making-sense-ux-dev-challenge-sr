@@ -1,0 +1,19 @@
+.caption {
+  font-size: clamp(
+    var(--font-caption-min),
+    var(--font-preferred-value) + var(--font-ratio),
+    var(--font-caption-max)
+  );
+}
+
+.regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}

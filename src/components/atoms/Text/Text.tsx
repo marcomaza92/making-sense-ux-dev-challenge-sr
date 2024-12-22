@@ -1,25 +1,23 @@
 import React from "react";
+import styles from "./Text.module.css";
+import clsx from "clsx";
+import { TextProps } from "./Text.types";
 
 const Text = React.forwardRef<
   HTMLParagraphElement | HTMLHeadingElement | HTMLSpanElement,
   React.HTMLAttributes<
     HTMLParagraphElement | HTMLHeadingElement | HTMLSpanElement
-  > & {
-    tag:
-      | "p"
-      | "h1"
-      | "h2"
-      | "h3"
-      | "h4"
-      | "h5"
-      | "h6"
-      | "span"
-      | "strong"
-      | "em";
-  }
->(({ tag, className, ...props }, ref) => {
+  > &
+    TextProps
+>(({ weight, type, tag, ...props }, ref) => {
   const Tag = tag || "span";
-  return <Tag ref={ref as never} className={className} {...props}></Tag>;
+  return (
+    <Tag
+      ref={ref as never}
+      className={clsx(styles.text, styles[type], styles[weight ?? "normal"])}
+      {...props}
+    ></Tag>
+  );
 });
 
 export default Text;

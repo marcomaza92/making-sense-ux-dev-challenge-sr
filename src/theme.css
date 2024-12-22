@@ -1,4 +1,9 @@
 html {
+  --header-height: 4rem;
+
+  --toggle-width: 76px;
+  --toggle-height: 36px;
+
   --background: hsla(0, 0%, 100%, 1);
   --foreground: hsla(0, 0%, 0%, 1);
 
@@ -55,8 +60,14 @@ html {
 
   --shadow-main: hsla(0, 0%, 0%, 0.2);
 
+  --shadow-toggle-container: hsla(0, 0%, 0%, 0.1);
+  --shadow-toggle-active: hsla(0, 0%, 0%, 0.05);
+
   --gradient-main-start: hsla(155, 87%, 43%, 1);
   --gradient-main-end: hsla(189, 59%, 57%, 1);
+
+  --toggle-active: var(--custom2-main);
+  --toggle-inactive: var(--neutral-gray-300);
 
   /*
     More on Fluid Typography:
@@ -64,6 +75,10 @@ html {
     - https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/
     - https://modern-fluid-typography.vercel.app/
   */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
   --font-preferred-value: 2vw;
   --font-ratio: 2rem;
@@ -106,5 +121,8 @@ html {
     --neutral-gray-900: hsla(0, 0%, 93%, 1);
 
     --shadow-main: hsla(0, 0%, 0%, 0.5);
+
+    --toggle-active: var(--neutral-gray-700);
+    --toggle-inactive: var(--neutral-gray-300);
   }
 }

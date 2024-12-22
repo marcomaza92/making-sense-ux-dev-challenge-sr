@@ -5,8 +5,8 @@
 
 .checkboxLabel {
   background-color: var(--background);
-  width: 76px;
-  height: 36px;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
   border-radius: 50px;
   position: relative;
   padding: 5px;
@@ -14,15 +14,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 0px 4px 0px var(--shadow-toggle-container);
+  color: var(--toggle-inactive);
 }
 
 .moonIcon,
 .sunIcon {
-  color: var(--main);
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+}
+
+.moonIcon {
+  margin-inline-start: 0.4375rem;
+}
+
+.sunIcon {
+  margin-inline-end: 0.25rem;
+}
+
+.active {
+  color: var(--toggle-active);
 }
 
 .ball {
   background-color: var(--background);
+  z-index: 1;
   width: 32px;
   aspect-ratio: 1;
   position: absolute;
@@ -32,6 +49,7 @@
   transition: transform 0.2s linear;
   border: thin solid var(--neutral-gray-100);
   transform: translateX(40px);
+  box-shadow: -1px 0px 12px 0px var(--shadow-toggle-active);
 }
 
 .animation {
