@@ -3,4 +3,11 @@
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  color: var(--custom2-main);
+}
+
+@media (min-width: 768px) {
+  .sidebarMobile {
+    display: none;
+  }
 }

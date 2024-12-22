@@ -11,9 +11,7 @@ export const Header = () => {
         <Image src="logo.png" alt="Home" size="small" />
       </Link>
       <div className={styles.userActions}>
-        <div>
-          <Toggle />
-        </div>
+        <Toggle />
         <Avatar />
       </div>
     </header>

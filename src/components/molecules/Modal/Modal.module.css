@@ -1,0 +1,78 @@
+.modal {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100dvh;
+  inset: 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-main);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.content {
+  animation: slideIn 0.25s ease-in-out;
+  transform-origin: top;
+  position: absolute;
+  box-shadow: -4px 0px 8px 0px var(--shadow-modal-content);
+  background-color: var(--neutral-gray-50);
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  min-height: 64px;
+  color: var(--custom2-main);
+}
+
+.closeIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.slideOut {
+  animation: slideOut 0.25s ease-in-out;
+}
+
+.fadeOut {
+  animation: fadeOut 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  to {
+    transform: translateX(100%);
+  }
+}

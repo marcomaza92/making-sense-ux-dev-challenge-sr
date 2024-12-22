@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavItem.module.css";
 import clsx from "clsx";
+import Text from "../../atoms/Text/Text";
 
 export interface NavItemProps {
   to: string;
@@ -15,7 +16,9 @@ const NavItem = (props: NavItemProps) => {
     <li className={styles.navItem}>
       <NavLink to={to} className={clsx(className, styles.navigation)}>
         {icon}
-        <span>{label}</span>
+        <Text tag="p" type="caption">
+          {label}
+        </Text>
       </NavLink>
     </li>
   );

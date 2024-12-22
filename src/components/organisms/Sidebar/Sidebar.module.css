@@ -1,53 +1,80 @@
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: width 0.25s;
-  padding-right: 1rem;
+  display: none;
 
   .navList {
+    width: 100%;
     list-style: none;
-    padding: 0;
+    padding-inline: 1.75rem;
+  }
+
+  &.active {
+    display: flex;
+    justify-content: end;
   }
 
   .collapse {
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    border-top: thin solid var(--neutral-gray-300);
-    color: var(--main);
-    svg {
-      height: 1rem;
-    }
-  }
-
-  &.collapsed {
-    width: 64px;
-    align-items: center;
-
-    .collapseLabel {
-      display: none;
-    }
-
-    .collapse {
-      justify-content: center;
-      svg {
-        transform: rotate(180deg);
-      }
-      .collapseLabel {
-        display: none;
-      }
-    }
+    display: none;
   }
 }
 
 @media (min-width: 768px) {
   .sidebar {
+    display: flex;
     grid-area: sidebar;
     width: 15rem;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.25s;
+    padding-right: 1rem;
+
+    .navList {
+      padding-inline: 0;
+
+      &.collapseLabelNavItem {
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .collapse {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 0.75rlh;
+      border-top: thin solid var(--neutral-gray-300);
+      color: var(--custom2-main);
+      svg {
+        height: 1rem;
+      }
+    }
+
+    .collapseIcon {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+    }
+
+    &.collapsed {
+      width: 64px;
+      align-items: center;
+
+      .collapseLabel {
+        display: none;
+      }
+
+      .collapse {
+        justify-content: center;
+        svg {
+          transform: rotate(180deg);
+        }
+        .collapseLabel {
+          display: none;
+        }
+      }
+    }
   }
 }

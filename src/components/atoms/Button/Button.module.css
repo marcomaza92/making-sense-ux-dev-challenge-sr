@@ -1,0 +1,16 @@
+.button {
+  width: auto;
+  min-height: 40px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: currentColor;
+
+  &.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 56px;
+  }
+}

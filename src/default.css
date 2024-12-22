@@ -27,6 +27,7 @@ img {
   #root {
     display: grid;
     grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto;
     grid-template-areas:
       "header header"
       "sidebar content";

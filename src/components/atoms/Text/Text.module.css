@@ -1,9 +1,11 @@
 .caption {
+  margin: 0;
   font-size: clamp(
     var(--font-caption-min),
     var(--font-preferred-value) + var(--font-ratio),
     var(--font-caption-max)
   );
+  color: currentColor;
 }
 
 .regular {

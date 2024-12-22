@@ -63,6 +63,12 @@ html {
   --shadow-toggle-container: hsla(0, 0%, 0%, 0.1);
   --shadow-toggle-active: hsla(0, 0%, 0%, 0.05);
 
+  --shadow-nav-item: rgba(0, 0, 0, 0.05);
+
+  --shadow-modal-content: hsla(0, 0%, 47%, 0.1);
+
+  --overlay-main: hsla(0, 0%, 0%, 0.08);
+
   --gradient-main-start: hsla(155, 87%, 43%, 1);
   --gradient-main-end: hsla(189, 59%, 57%, 1);
 
@@ -109,6 +115,11 @@ html {
     --background: hsla(0, 0%, 0%, 1);
     --foreground: hsla(0, 0%, 100%, 1);
 
+    --custom2-main: hsla(0, 0%, 98%, 1);
+    --custom2-light: hsla(205, 59%, 6%, 1);
+    --custom2-dark: hsla(203, 51%, 20%, 1);
+    --custom2-text-contrast: hsla(203, 52%, 13%, 1);
+
     --neutral-gray-50: hsla(0, 0%, 11%, 1);
     --neutral-gray-100: hsla(0, 0%, 16%, 1);
     --neutral-gray-200: hsla(0, 0%, 20%, 1);
@@ -121,6 +132,11 @@ html {
     --neutral-gray-900: hsla(0, 0%, 93%, 1);
 
     --shadow-main: hsla(0, 0%, 0%, 0.5);
+
+    --shadow-toggle-container: hsla(0, 0%, 93%, 0.1);
+    --shadow-toggle-active: hsla(0, 0%, 93%, 0.05);
+
+    --overlay-main: hsla(0, 0%, 0%, 0.12);
 
     --toggle-active: var(--neutral-gray-700);
     --toggle-inactive: var(--neutral-gray-300);
