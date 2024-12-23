@@ -19,6 +19,7 @@ import clsx from "clsx";
 import Search from "../Search/Search";
 import EmptyState from "../EmptyState/EmptyState";
 import { Status } from "../Status/Status";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 const defaultColumns: ColumnDef<ProductProps>[] = [
   {
@@ -64,7 +65,7 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
     header: "Amount",
     accessorKey: "amount",
     meta: {
-      className: `${styles.hiddenOnMobileAndTablet} ${styles.textRight}`,
+      className: `${styles.hiddenOnMobileAndTablet} ${styles.alignRight}`,
     },
     cell: (info) => (
       <div className={styles.tableCellContent}>
@@ -158,7 +159,14 @@ export const Table = (props: TableProps) => {
                   <th
                     key={header.id}
                     colSpan={header.colSpan}
+                    tabIndex={0}
                     onClick={header.column.getToggleSortingHandler()}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        header.column.getToggleSortingHandler();
+                        e.preventDefault();
+                      }
+                    }}
                     className={clsx(
                       styles.tableHeaderCell,
                       (header.column.columnDef.meta as { className?: string })
@@ -172,6 +180,11 @@ export const Table = (props: TableProps) => {
                             header.column.columnDef.header,
                             header.getContext()
                           )}
+                      {header.column.getIsSorted() === "asc" ? (
+                        <ChevronUpIcon />
+                      ) : header.column.getIsSorted() === "desc" ? (
+                        <ChevronDownIcon />
+                      ) : null}
                     </Text>
                   </th>
                 ))}

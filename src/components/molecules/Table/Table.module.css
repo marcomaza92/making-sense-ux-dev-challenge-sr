@@ -12,20 +12,44 @@
   padding-bottom: 1rem;
 }
 
+.tableHeaderContainer {
+  display: flex;
+  gap: 0.25rem;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .tableContent {
   width: 100%;
   border-spacing: 0;
 }
 
 .tableHeaderCell {
+  cursor: pointer;
   text-align: left;
   border-bottom: thin solid var(--neutral-gray-300);
+  color: var(--neutral-gray-800);
   padding: 0;
   margin: 0;
   padding-bottom: 0.5rem;
 
-  &.textRight {
-    text-align: right;
+  p {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.alignRight {
+    p {
+      justify-content: end;
+    }
   }
 }
 
@@ -64,5 +88,14 @@
 @media (min-width: 992px) {
   .hiddenOnMobileAndTablet {
     display: table-cell;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tableHeaderCell {
+    transition: color 0.25s ease-in-out;
+    &:hover {
+      color: var(--custom2-main);
+    }
   }
 }
