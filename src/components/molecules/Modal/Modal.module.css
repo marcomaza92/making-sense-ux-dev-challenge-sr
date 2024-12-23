@@ -31,7 +31,7 @@
     border: thin solid var(--neutral-gray-50);
     border-radius: 24px;
     box-shadow: 0px 0px 16px 0px var(--shadow-content);
-    margin-inline: auto;
+    margin: auto;
     inset: 0;
     max-width: unset;
     min-width: 300px;
