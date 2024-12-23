@@ -8,15 +8,31 @@ import { Sidebar } from "../../organisms/Sidebar/Sidebar";
 const Avatar = () => {
   const user = "Robert";
   const [isOpen, setIsOpen] = useState(false);
+
   const handleOpenSidebar = () => {
     if (window.innerWidth < 768) {
       setIsOpen(!isOpen);
     }
   };
+
   return (
     <div className={styles.avatarContainer}>
       <Image src="user.png" alt="User Avatar" size="small" />
-      <Text onClick={handleOpenSidebar} weight="bold" type="caption" tag="p">
+      <Text
+        role="button"
+        tabIndex={0}
+        onClick={handleOpenSidebar}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            handleOpenSidebar();
+            e.preventDefault();
+          }
+        }}
+        weight="bold"
+        type="caption"
+        tag="p"
+        className={styles.avatarName}
+      >
         Hi, {user}!
       </Text>
       <div className={styles.sidebarMobile}>

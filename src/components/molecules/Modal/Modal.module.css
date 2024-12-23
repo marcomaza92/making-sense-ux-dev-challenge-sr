@@ -54,6 +54,7 @@
   width: 100%;
   min-height: 48px;
   color: var(--custom2-main);
+  cursor: pointer;
 }
 
 .closeIcon {
@@ -96,5 +97,26 @@
 @keyframes slideOut {
   to {
     transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .overlay,
+  .content,
+  .slideOut,
+  .fadeOut {
+    animation: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .closeIcon {
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      padding: 0.25rem;
+      border-radius: 100%;
+      background-color: var(--custom2-main);
+      color: var(--custom2-text-contrast);
+    }
   }
 }

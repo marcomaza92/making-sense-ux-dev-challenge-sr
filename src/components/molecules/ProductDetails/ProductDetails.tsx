@@ -5,13 +5,12 @@ import styles from "./ProductDetails.module.css";
 import Image from "../../atoms/Image/Image";
 import Text from "../../atoms/Text/Text";
 import { Cell } from "@tanstack/react-table";
-import { ProductProps } from "../Table/Table.types";
+import { ProductProps, ProductStatusProps } from "../Table/Table.types";
 import Button from "../../atoms/Button/Button";
-import Label from "../Label/Label";
 import clsx from "clsx";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
-import { statusIcons } from "../../../data/constants";
+import { Status } from "../Status/Status";
 
 const ProductDetails = (props: ProductDetailsProps) => {
   const { row, onStatusUpdate } = props;
@@ -43,6 +42,7 @@ const ProductDetails = (props: ProductDetailsProps) => {
           {row.getVisibleCells().map((cell: Cell<ProductProps, unknown>) =>
             cell.column.id === "product" ? (
               <Text
+                key={cell.id}
                 tag="h4"
                 type="heading4"
                 weight="bold"
@@ -52,6 +52,7 @@ const ProductDetails = (props: ProductDetailsProps) => {
               </Text>
             ) : cell.column.id === "moreInfo" ? (
               <Text
+                key={cell.id}
                 tag="p"
                 type="subtitle1"
                 className={styles.rowDetailSubtitle}
@@ -90,11 +91,7 @@ const ProductDetails = (props: ProductDetailsProps) => {
                       : String(cell.getValue())}
                   </Text>
                 ) : (
-                  <Label
-                    type={`status${String(cell.getValue())}`}
-                    text={String(cell.getValue())}
-                    icon={statusIcons[String(cell.getValue()).toLowerCase()]}
-                  />
+                  <Status status={cell.getValue() as ProductStatusProps} />
                 )}
               </div>
             ))}
@@ -155,7 +152,11 @@ const ProductDetails = (props: ProductDetailsProps) => {
                 <Text tag="p" type="body2" weight="bold">
                   {row.original.product}
                 </Text>
-                <Text tag="p" type="caption">
+                <Text
+                  tag="p"
+                  type="caption"
+                  className={styles.productSummaryInfoSubtitle}
+                >
                   {row.original.moreInfo}
                 </Text>
               </div>

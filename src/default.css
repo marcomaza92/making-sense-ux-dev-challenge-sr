@@ -2,7 +2,7 @@ html,
 body {
   height: 100vh;
   font-family: "Red Hat Display", sans-serif;
-  color: var(--main);
+  color: var(--custom2-main);
 }
 #root {
   height: 100%;
@@ -40,7 +40,4 @@ img {
       "header header"
       "sidebar content";
   }
-}
-
-@media (min-width: 1200px) {
 }

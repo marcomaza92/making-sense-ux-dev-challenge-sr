@@ -1,4 +1,21 @@
+.tableRow {
+  &:focus,
+  &:focus-visible,
+  &:active {
+    background-color: var(--neutral-gray-300);
+  }
+}
+
 .tableCell {
   padding: 1rem 0;
   border-bottom: thin solid var(--neutral-gray-200);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tableRow {
+    transition: background-color 0.25s ease-in-out;
+    &:hover {
+      background-color: var(--neutral-gray-300);
+    }
+  }
 }

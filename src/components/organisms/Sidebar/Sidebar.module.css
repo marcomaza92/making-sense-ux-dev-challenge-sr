@@ -38,6 +38,7 @@
     }
 
     .collapse {
+      cursor: pointer;
       appearance: none;
       background-color: transparent;
       border: none;
@@ -74,6 +75,17 @@
         .collapseLabel {
           display: none;
         }
+      }
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .collapse {
+    transition: font-weight 0.25s ease-in-out;
+    &:hover {
+      .collapseLabel {
+        font-weight: var(--font-weight-bold);
       }
     }
   }

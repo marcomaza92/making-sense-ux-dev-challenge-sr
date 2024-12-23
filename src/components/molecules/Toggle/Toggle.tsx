@@ -9,21 +9,27 @@ export const Toggle = () => {
   );
 
   useEffect(() => {
-    // Update document class and local storage when mode changes
     document.documentElement.classList.toggle("dark", isDarkMode);
     localStorage.setItem("darkMode", isDarkMode.toString());
   }, [isDarkMode]);
 
   return (
     <div>
-      <input
-        type="checkbox"
-        className={styles.checkbox}
-        id="toggle"
-        checked={isDarkMode}
-        onChange={() => setIsDarkMode(!isDarkMode)}
-      />
       <label htmlFor="toggle" className={styles.checkboxLabel}>
+        <input
+          type="checkbox"
+          className={styles.checkbox}
+          id="toggle"
+          aria-label="Dark Mode Toggle"
+          checked={isDarkMode}
+          onChange={() => setIsDarkMode(!isDarkMode)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              setIsDarkMode(!isDarkMode);
+              e.preventDefault();
+            }
+          }}
+        />
         <MoonIcon
           className={clsx(styles.moonIcon, { [styles.active]: isDarkMode })}
         />
@@ -34,7 +40,6 @@ export const Toggle = () => {
           className={clsx(styles.ball, {
             [styles.animation]: isDarkMode,
           })}
-          aria-label="Dark Mode Toggle"
         ></span>
       </label>
     </div>

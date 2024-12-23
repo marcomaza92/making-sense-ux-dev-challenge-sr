@@ -13,7 +13,18 @@ const Row = (props: RowProps) => {
 
   return (
     <>
-      <tr onClick={() => setIsOpen(true)} className={styles.tableRow}>
+      <tr
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            setIsOpen(true);
+            e.preventDefault();
+          }
+        }}
+        onClick={() => setIsOpen(true)}
+        className={styles.tableRow}
+      >
         {row.getVisibleCells().map((cell: Cell<ProductProps, unknown>) => (
           <td
             key={cell.id}

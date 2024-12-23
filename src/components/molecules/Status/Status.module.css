@@ -16,17 +16,17 @@
   }
 
   &.approved {
-    background-color: var(--success);
-    color: var(--text-contrast);
+    background-color: var(--success-main);
+    color: var(--success-text-contrast);
   }
 
   &.pending {
-    background-color: var(--warning);
-    color: var(--text-contrast);
+    background-color: var(--warning-main);
+    color: var(--warning-text-contrast);
   }
 
   &.rejected {
-    background-color: var(--error);
-    color: var(--text);
+    background-color: var(--error-main);
+    color: var(--error-text-contrast);
   }
 }

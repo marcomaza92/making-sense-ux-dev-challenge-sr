@@ -59,3 +59,6 @@
 - Add main components, atomic design primitives and business logic
 - Add extra component outside the base design
 - Add focus, focus-visible and active pseudo-classes
+- Add keyboard navigation and actions
+- Adjust dark mode theme
+- Add hover states

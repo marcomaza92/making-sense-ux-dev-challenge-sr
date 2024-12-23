@@ -11,7 +11,7 @@ import { SidebarProps } from "./Sidebar.types";
 import Text from "../../atoms/Text/Text";
 
 export const Sidebar = (props: SidebarProps) => {
-  const isOpen = props.isOpen;
+  const { isOpen } = props;
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -26,8 +26,12 @@ export const Sidebar = (props: SidebarProps) => {
           [styles.collapseLabelNavItem]: collapsed,
         })}
       >
-        <NavItem to="/" label="Home" icon={<HomeIcon />} />
-        <NavItem to="/messages" label="Messages" icon={<EnvelopeIcon />} />
+        <NavItem to="/" label="Home" icon={<HomeIcon aria-hidden="true" />} />
+        <NavItem
+          to="/messages"
+          label="Messages"
+          icon={<EnvelopeIcon aria-hidden="true" />}
+        />
       </ul>
       <button
         onClick={() => setCollapsed(!collapsed)}
@@ -42,7 +46,7 @@ export const Sidebar = (props: SidebarProps) => {
           Collapse
         </Text>
         <div className={styles.collapseIcon}>
-          <ChevronLeftIcon />
+          <ChevronLeftIcon aria-hidden="true" />
         </div>
       </button>
     </nav>

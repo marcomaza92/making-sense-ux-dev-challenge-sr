@@ -9,17 +9,12 @@ const Text = React.forwardRef<
     HTMLParagraphElement | HTMLHeadingElement | HTMLSpanElement
   > &
     TextProps
->(({ weight, type, tag, className, ...props }, ref) => {
-  const Tag = tag || "span";
+>(({ weight = "normal", type, tag = "span", className, ...props }, ref) => {
+  const Tag = tag;
   return (
     <Tag
       ref={ref as never}
-      className={clsx(
-        className,
-        styles.text,
-        styles[type],
-        styles[weight ?? "normal"]
-      )}
+      className={clsx(className, styles.text, styles[type], styles[weight])}
       {...props}
     ></Tag>
   );

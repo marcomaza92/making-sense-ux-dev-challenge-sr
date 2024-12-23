@@ -7,9 +7,26 @@
     justify-content: center;
     min-width: 75px;
 
+    &:focus,
+    &:focus-visible,
+    &:active {
+      border-bottom: 2px solid var(--success-main);
+    }
+
     &[aria-current="page"] {
       border-bottom: 2px solid var(--success-main);
       font-weight: var(--font-weight-bold);
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tab {
+    a {
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        border-bottom: 2px solid var(--success-main);
+      }
     }
   }
 }

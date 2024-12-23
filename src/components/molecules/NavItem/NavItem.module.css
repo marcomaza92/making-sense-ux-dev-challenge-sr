@@ -26,3 +26,12 @@
     font-weight: var(--font-weight-bold);
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .navigation {
+    transition: font-weight 0.25s ease-in-out;
+    &:hover {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}

@@ -20,27 +20,29 @@ const Search = (props: SearchProps) => {
   };
 
   return (
-    <div className={styles.search}>
-      <FormControl
-        aria-label="Search by name"
-        placeholder="Search by name"
-        type="search"
-        className={styles.searchInput}
-        defaultValue={inputValue}
-        onChange={(event: {
-          currentTarget: { value: React.SetStateAction<string> };
-        }) => setInputValue(event?.currentTarget.value)}
-      />
-      <Button
-        onClick={handleInputChange}
-        type="search"
-        className={styles.searchButton}
-      >
-        <Text tag="p" type="caption" weight="bold">
-          Search
-        </Text>
-      </Button>
-    </div>
+    <search className={styles.search}>
+      <form className={styles.form} action="">
+        <FormControl
+          aria-label="Search by name"
+          placeholder="Search by name"
+          type="search"
+          className={styles.searchInput}
+          defaultValue={inputValue}
+          onChange={(event: {
+            currentTarget: { value: React.SetStateAction<string> };
+          }) => setInputValue(event?.currentTarget.value)}
+        />
+        <Button
+          onClick={handleInputChange}
+          type="search"
+          className={styles.searchButton}
+        >
+          <Text tag="p" type="caption" weight="bold">
+            Search
+          </Text>
+        </Button>
+      </form>
+    </search>
   );
 };
 

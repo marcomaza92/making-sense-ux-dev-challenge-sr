@@ -15,11 +15,10 @@ import type {
 import Row from "../Row/Row";
 import styles from "./Table.module.css";
 import Text from "../../atoms/Text/Text";
-import Label from "../Label/Label";
 import clsx from "clsx";
-import { statusIcons } from "../../../data/constants";
 import Search from "../Search/Search";
 import EmptyState from "../EmptyState/EmptyState";
+import { Status } from "../Status/Status";
 
 const defaultColumns: ColumnDef<ProductProps>[] = [
   {
@@ -59,13 +58,7 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
     header: "Status",
     accessorKey: "status",
     meta: { className: styles.hiddenOnMobile },
-    cell: (info) => (
-      <Label
-        type={`status${String(info.getValue())}`}
-        text={String(info.getValue())}
-        icon={statusIcons[String(info.getValue()).toLowerCase()]}
-      />
-    ),
+    cell: (info) => <Status status={info.getValue() as ProductStatusProps} />,
   },
   {
     header: "Amount",
@@ -140,7 +133,7 @@ export const Table = (props: TableProps) => {
     );
 
   return (
-    <div className={styles.tableContainer}>
+    <section aria-label="Transactions" className={styles.tableContainer}>
       <div className={styles.tableHeader}>
         <Text tag="h5" type="heading5" weight="bold">
           Transactions
@@ -192,6 +185,6 @@ export const Table = (props: TableProps) => {
           </tbody>
         </table>
       )}
-    </div>
+    </section>
   );
 };

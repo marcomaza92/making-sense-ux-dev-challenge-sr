@@ -6,13 +6,9 @@ import { ImageProps } from "./Image.types";
 const Image = React.forwardRef<
   HTMLImageElement,
   React.ImgHTMLAttributes<HTMLImageElement> & ImageProps
->(({ size, ...props }, ref) => {
+>(({ size = "medium", ...props }, ref) => {
   return (
-    <img
-      ref={ref}
-      className={clsx(styles.image, styles[size ?? "medium"])}
-      {...props}
-    />
+    <img ref={ref} className={clsx(styles.image, styles[size])} {...props} />
   );
 });
 

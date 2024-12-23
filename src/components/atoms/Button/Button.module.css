@@ -24,6 +24,7 @@
 
   &.primary {
     background-color: var(--success-main);
+    color: var(--success-text-contrast);
   }
 
   &.secondary {
@@ -42,6 +43,7 @@
 
   &.success {
     background-color: var(--success-main);
+    color: var(--success-text-contrast);
   }
 
   &.search {
@@ -49,5 +51,31 @@
       var(--gradient-main-start),
       var(--gradient-main-end)
     );
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button {
+    &.secondary {
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        background-color: var(--success-main);
+        color: var(--success-text-contrast);
+      }
+    }
+    &.error {
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        background-color: var(--error-main);
+        color: var(--error-text-contrast);
+      }
+    }
+    &.success,
+    &.primary {
+      transition: border 0.25s ease-in-out;
+      &:hover {
+        border: thin solid var(--foreground);
+      }
+    }
   }
 }

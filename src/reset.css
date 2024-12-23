@@ -108,7 +108,7 @@ select {
 }
 
 :focus-visible {
-  outline: medium dashed var(--main, currentColor);
+  outline: medium dashed var(--foreground, currentColor);
   outline-offset: 2px;
 }
 

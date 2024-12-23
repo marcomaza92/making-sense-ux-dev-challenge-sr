@@ -5,8 +5,10 @@
     border-radius: 24px;
     border: 0;
     padding-inline-start: 0.5rem;
+    background-color: var(--neutral-gray-100);
 
     &::placeholder {
+      color: var(--neutral-gray-800);
       font-size: clamp(
         var(--font-body2-min),
         var(--font-preferred-value) + var(--font-ratio),

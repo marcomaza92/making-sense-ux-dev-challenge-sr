@@ -11,3 +11,13 @@
     display: none;
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .avatarName {
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+    &:hover {
+      color: var(--foreground);
+    }
+  }
+}

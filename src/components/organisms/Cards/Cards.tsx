@@ -5,6 +5,7 @@ import styles from "./Cards.module.css";
 import { useEffect, useRef } from "react";
 
 const Cards = (props: CardsProps) => {
+  const { cards } = props;
   const cardsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -24,9 +25,8 @@ const Cards = (props: CardsProps) => {
     return () => window.removeEventListener("resize", updateCardsWidth);
   }, []);
 
-  const { cards } = props;
   return (
-    <div className={styles.cards} ref={cardsRef}>
+    <section role="list" className={styles.cards} ref={cardsRef}>
       {cards.map((card: CardProps) => (
         <Card
           key={card.id}
@@ -38,7 +38,7 @@ const Cards = (props: CardsProps) => {
           result={card.result}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

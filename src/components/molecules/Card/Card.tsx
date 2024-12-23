@@ -10,17 +10,21 @@ import clsx from "clsx";
 const Card = (props: CardProps) => {
   const { title, amount, historicalAmount, result, timePeriod } = props;
   return (
-    <div className={clsx(styles.card, styles[result])}>
+    <div
+      tabIndex={0}
+      role="listitem"
+      className={clsx(styles.card, styles[result])}
+    >
       <div className={styles.cardHeader}>
-        <Text tag="p" type="body2">
+        <Text tag="p" type="body2" aria-label={title}>
           {title}
         </Text>
         <div className={clsx(styles.cardHeaderIcon, styles[result])}>
           {result &&
             (result === "positive" ? (
-              <ArrowTrendingUpIcon />
+              <ArrowTrendingUpIcon aria-hidden="true" />
             ) : (
-              <ArrowTrendingDownIcon />
+              <ArrowTrendingDownIcon aria-hidden="true" />
             ))}
         </div>
       </div>
@@ -29,6 +33,7 @@ const Card = (props: CardProps) => {
         type="heading4"
         weight="bold"
         className={styles.negativeText}
+        aria-label={amount}
       >
         {amount || "-"}
       </Text>
@@ -37,10 +42,10 @@ const Card = (props: CardProps) => {
           [styles.reverse]: timePeriod !== "today",
         })}
       >
-        <Text tag="p" type="caption">
+        <Text tag="p" type="caption" aria-label={timePeriod}>
           {timePeriod ?? "-"}
         </Text>
-        <Text tag="p" type="caption">
+        <Text tag="p" type="caption" aria-label={historicalAmount}>
           {historicalAmount || "-"}
         </Text>
       </div>

@@ -16,6 +16,11 @@
   align-items: center;
   box-shadow: 0px 0px 4px 0px var(--shadow-toggle-container);
   color: var(--toggle-inactive);
+
+  &:focus-within {
+    outline: 2px solid var(--success-main);
+    outline-offset: 0;
+  }
 }
 
 .moonIcon,
@@ -54,4 +59,20 @@
 
 .animation {
   transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion) {
+  .animation {
+    animation: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .checkboxLabel {
+    transition: outline 0.25s ease-in-out;
+    &:hover {
+      outline: 2px solid var(--success-main);
+      outline-offset: 0;
+    }
+  }
 }

@@ -8,8 +8,13 @@
   position: relative;
 }
 
+.form {
+  width: 100%;
+}
+
 .searchInput {
   width: 100%;
+  box-shadow: -4px 0px 8px 0px var(--shadow-modal-content);
 
   &:focus,
   &:focus-visible,
@@ -33,5 +38,16 @@
   &:active {
     outline: 2px solid var(--success-main);
     outline-offset: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .searchInput,
+  .searchButton {
+    transition: outline 0.25s ease-in-out;
+    &:hover {
+      outline: 2px solid var(--success-main);
+      outline-offset: 0;
+    }
   }
 }

@@ -2,10 +2,11 @@ import clsx from "clsx";
 import styles from "./Status.module.css";
 import {
   CheckCircleIcon,
-  ExclamationCircleIcon,
-  XCircleIcon,
+  ExclamationTriangleIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import type { ProductStatusProps } from "../Table/Table.types";
+import Text from "../../atoms/Text/Text";
 
 const getStatusStyles = (status: ProductStatusProps) => {
   return clsx(styles.container, {
@@ -19,9 +20,11 @@ export const Status = ({ status }: { status: ProductStatusProps }) => {
   return (
     <div className={getStatusStyles(status)}>
       {status === "Approved" && <CheckCircleIcon aria-hidden="true" />}
-      {status === "Pending" && <ExclamationCircleIcon aria-hidden="true" />}
-      {status === "Rejected" && <XCircleIcon aria-hidden="true" />}
-      <p>{status}</p>
+      {status === "Pending" && <ExclamationTriangleIcon aria-hidden="true" />}
+      {status === "Rejected" && <XMarkIcon aria-hidden="true" />}
+      <Text tag="p" type="caption">
+        {status}
+      </Text>
     </div>
   );
 };
