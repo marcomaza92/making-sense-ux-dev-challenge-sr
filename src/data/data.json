@@ -3,6 +3,8 @@
     {
       "id": 1,
       "customer": "Savannah Nguyen",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Sep 20, 2024 21:04",
       "product": "Cowl neck sweater",
       "status": "Pending",
@@ -13,6 +15,8 @@
     {
       "id": 2,
       "customer": "Robert Chen",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 15, 2024 13:22",
       "product": "Denim jacket",
       "status": "Approved",
@@ -23,6 +27,8 @@
     {
       "id": 3,
       "customer": "Emma Thompson",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 02, 2024 09:15",
       "product": "Floral dress",
       "status": "Approved",
@@ -33,6 +39,8 @@
     {
       "id": 4,
       "customer": "Marcus Johnson",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Sep 28, 2024 16:45",
       "product": "Leather boots",
       "status": "Rejected",
@@ -43,6 +51,8 @@
     {
       "id": 5,
       "customer": "Sofia Rodriguez",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 12, 2024 11:30",
       "product": "Silk scarf",
       "status": "Approved",
@@ -53,6 +63,8 @@
     {
       "id": 6,
       "customer": "Lucas Kim",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 18, 2024 14:20",
       "product": "Cargo pants",
       "status": "Pending",
@@ -63,6 +75,8 @@
     {
       "id": 7,
       "customer": "Isabella Garcia",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Sep 25, 2024 10:10",
       "product": "Summer hat",
       "status": "Approved",
@@ -73,6 +87,8 @@
     {
       "id": 8,
       "customer": "William Taylor",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 05, 2024 17:55",
       "product": "Graphic t-shirt",
       "status": "Rejected",
@@ -83,6 +99,8 @@
     {
       "id": 9,
       "customer": "Olivia Brown",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 08, 2024 12:40",
       "product": "Yoga pants",
       "status": "Pending",
@@ -93,6 +111,8 @@
     {
       "id": 10,
       "customer": "Alexander Lee",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Sep 30, 2024 15:15",
       "product": "Winter coat",
       "status": "Pending",
@@ -103,6 +123,8 @@
     {
       "id": 11,
       "customer": "Mia Patel",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 14, 2024 08:30",
       "product": "Sundress",
       "status": "Approved",
@@ -113,6 +135,8 @@
     {
       "id": 12,
       "customer": "Daniel Wilson",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 01, 2024 19:25",
       "product": "Running shoes",
       "status": "Approved",
@@ -123,6 +147,8 @@
     {
       "id": 13,
       "customer": "Ava Martinez",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 11, 2024 13:50",
       "product": "Beanie hat",
       "status": "Rejected",
@@ -133,6 +159,8 @@
     {
       "id": 14,
       "customer": "Noah Anderson",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 17, 2024 16:05",
       "product": "Hoodie",
       "status": "Pending",
@@ -143,6 +171,8 @@
     {
       "id": 15,
       "customer": "Charlotte Wong",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Sep 22, 2024 11:45",
       "product": "Midi skirt",
       "status": "Approved",
@@ -153,6 +183,8 @@
     {
       "id": 16,
       "customer": "Ethan Davis",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 09, 2024 14:35",
       "product": "Baseball cap",
       "status": "Rejected",
@@ -163,6 +195,8 @@
     {
       "id": 17,
       "customer": "Sophia Miller",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 16, 2024 10:20",
       "product": "Cardigan",
       "status": "Pending",
@@ -173,6 +207,8 @@
     {
       "id": 18,
       "customer": "James Smith",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Sep 27, 2024 18:15",
       "product": "Jeans",
       "status": "Approved",
@@ -183,6 +219,8 @@
     {
       "id": 19,
       "customer": "Luna Chang",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 03, 2024 12:55",
       "product": "Ankle boots",
       "status": "Pending",
@@ -193,6 +231,8 @@
     {
       "id": 20,
       "customer": "Benjamin Moore",
+      "moreInfo": "Lyla - L12",
+      "image": "https://pngimg.com/uploads/sweater/sweater_PNG50.png",
       "date": "Oct 07, 2024 15:40",
       "product": "Polo shirt",
       "status": "Rejected",

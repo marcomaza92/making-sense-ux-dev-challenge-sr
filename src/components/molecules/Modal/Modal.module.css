@@ -11,6 +11,7 @@
   height: 100%;
   background-color: var(--overlay-main);
   animation: fadeIn 0.25s ease-in-out;
+  display: flex;
 }
 
 .content {
@@ -22,15 +23,36 @@
   top: 0;
   right: 0;
   width: 60%;
+  max-width: 480px;
   height: 100%;
+
+  &.confirmationStatus {
+    align-self: center;
+    border: thin solid var(--neutral-gray-50);
+    border-radius: 24px;
+    box-shadow: 0px 0px 16px 0px var(--shadow-content);
+    margin-inline: auto;
+    inset: 0;
+    max-width: unset;
+    min-width: 300px;
+    min-height: 150px;
+    width: fit-content;
+    height: fit-content;
+
+    .closeButton {
+      display: none;
+    }
+  }
 }
 
 .closeButton {
   display: flex;
+  position: relative;
+  z-index: 100;
   align-items: center;
   justify-content: end;
   width: 100%;
-  min-height: 64px;
+  min-height: 48px;
   color: var(--custom2-main);
 }
 

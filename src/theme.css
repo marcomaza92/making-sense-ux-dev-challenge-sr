@@ -62,6 +62,8 @@ html {
 
   --shadow-main: hsla(0, 0%, 0%, 0.2);
 
+  --shadow-button: hsla(0, 0%, 0%, 0.1);
+
   --shadow-status: hsla(0, 0%, 0%, 0.25);
 
   --shadow-toggle-container: hsla(0, 0%, 0%, 0.1);
@@ -122,8 +124,8 @@ html {
     --foreground: hsla(0, 0%, 100%, 1);
 
     --custom2-main: hsla(0, 0%, 98%, 1);
-    --custom2-light: hsla(205, 59%, 6%, 1);
-    --custom2-dark: hsla(203, 51%, 20%, 1);
+    --custom2-light: hsla(0, 0%, 88%, 1);
+    --custom2-dark: hsla(0, 0%, 74%, 1);
     --custom2-text-contrast: hsla(203, 52%, 13%, 1);
 
     --primary-text-contrast: hsla(0, 0%, 98%, 1);

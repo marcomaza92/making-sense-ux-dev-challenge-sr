@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ColumnDef,
   flexRender,
@@ -7,7 +7,11 @@ import {
   SortingState,
   useReactTable,
 } from "@tanstack/react-table";
-import type { ProductProps, TableProps } from "./Table.types";
+import type {
+  ProductProps,
+  ProductStatusProps,
+  TableProps,
+} from "./Table.types";
 import Row from "../Row/Row";
 import styles from "./Table.module.css";
 import Text from "../../atoms/Text/Text";
@@ -19,7 +23,7 @@ import {
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
-const statusIcons: Record<string, React.ReactElement> = {
+export const statusIcons: Record<string, React.ReactElement> = {
   pending: <ExclamationTriangleIcon />,
   rejected: <XMarkIcon />,
   approved: <CheckCircleIcon />,
@@ -83,13 +87,40 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
       </div>
     ),
   },
+  {
+    header: "Payment Method",
+    accessorKey: "paymentMethod",
+    meta: { className: styles.alwaysHidden },
+  },
+  {
+    header: "Transaction ID",
+    accessorKey: "id",
+    meta: { className: styles.alwaysHidden },
+  },
+  {
+    header: "More Info",
+    accessorKey: "moreInfo",
+    meta: { className: styles.alwaysHidden },
+  },
+  {
+    header: "Image",
+    accessorKey: "image",
+    meta: { className: styles.alwaysHidden },
+  },
 ];
 
 export const Table = (props: TableProps) => {
-  const { data } = props;
+  const { data: initialData } = props;
+  const [data, setData] = useState(initialData);
   const [columns] = React.useState(() => [...defaultColumns]);
-
   const [sorting, setSorting] = React.useState<SortingState>([]);
+  const handleStatusUpdate = (id: number, newStatus: ProductStatusProps) => {
+    setData((prevData) =>
+      prevData.map((item) =>
+        item.id === id ? { ...item, status: newStatus } : item
+      )
+    );
+  };
 
   const table = useReactTable({
     data,
@@ -142,7 +173,7 @@ export const Table = (props: TableProps) => {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <Row key={row.id} row={row} />
+            <Row key={row.id} row={row} onStatusUpdate={handleStatusUpdate} />
           ))}
         </tbody>
       </table>

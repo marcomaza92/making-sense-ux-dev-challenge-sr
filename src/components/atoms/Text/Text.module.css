@@ -18,6 +18,22 @@ em {
   );
 }
 
+.subtitle1 {
+  font-size: clamp(
+    var(--font-subtitle1-min),
+    var(--font-preferred-value) + var(--font-ratio),
+    var(--font-subtitle1-max)
+  );
+}
+
+.body1 {
+  font-size: clamp(
+    var(--font-body1-min),
+    var(--font-preferred-value) + var(--font-ratio),
+    var(--font-body1-max)
+  );
+}
+
 .body2 {
   font-size: clamp(
     var(--font-body2-min),

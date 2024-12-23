@@ -42,7 +42,15 @@
   display: none;
 }
 
+.alwaysHidden {
+  display: none;
+}
+
 @media (min-width: 768px) {
+  .tableContainer {
+    padding: 1.5rem;
+  }
+
   .hiddenOnMobile {
     display: table-cell;
   }
