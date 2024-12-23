@@ -1,46 +1,114 @@
-# UX Developer Sr. Challenge
+# UX Developer Challenge
 
-## The Challenge
+## Introduction
 
-The client has requested that you build an Admin Dashboard view to track the latest transactions in sales and revenue. You can find the Figma file with the various views and flows [here](https://www.figma.com/design/JF8Kajh77NRzE1ojlyWs62/UX-Dev-Challenge-SR).
+This is my solution to the challenge assigned for the UX Dev position at Making Sense.
 
-Please deliver a complete experience using React. If you are familiar with type-checking tools like TypeScript or PropTypes, feel free to use them. You may also use a CSS-in-JS library (such as Emotion or Styled Components), SASS, or plain CSS.
+Based on a provided design, the idea was to analyze it and build primitives and update tokens accordingly. After that I started building/updating the base layout, while I was adding some new components to follow the atomic design pattern. Finally, I switched to a more a11y focused approach and added some attrs and tools from both HTML and CSS to enhance and get closer to a basic compliance. In addition, I added Storybook with a sample story to demonstrate the flexibility of the primitives and atomic design pattern.
 
-All views must be responsive and display correctly on Desktop, Tablet, and Mobile. You will only receive a desktop mockup. On mobile, the user should be able to see as much information as possible on the screen while maintaining design coherence.
+At the end there is a simple changelog which contains my approaches and task done, and their order. This is a very useful guide to use a reference for future projects or endeavors.
 
-### User Requirements
+After that there is a list of, my preferred, next steps to give continuity to the project and draw a possible path for a v2.0
 
-Your users should be able to:
+Last but not least, you can see the solution deployed in this [link](https://making-sense-ux-dev-challenge-sr.vercel.app/)
 
-- Switch between dark and light modes
-- View the optimal layout based on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- Access more information about a specific transaction through a drawer, and if the transaction selected is Pending has to be the ability to Approve or Reject the transaction itself with a modal to confirm your action
-- Search in the input and find the transaction mocked by the `User` if is not any value display an `EmptyState`
-- Access to the `SideBar` in the normal or collapsable view, also can access to the `Messages` section with the correct EmptyState
-- View the `EmptyState` of the `Order` Tab and ability to switch between tabs
+## Stack
 
-### Documentation and Delivery
+- vite
+- react router
+- Storybook
+- CSS Modules
+- Vercel
 
-Upon delivery, please provide clear explanations of your decision-making process regarding the responsive design. Make sure to document your code as thoroughly as possible.
+## Setup
 
-## Where to Find Everything
+To setup dependencies, just do the following:
 
-On the `Platform` page, you will find the `Dashboard` with the `Drawer` interaction and the empty state of the Order Tab.
+```javascript
+npm i
+```
 
-On the `Component` page, you will find the specific components, and in the `Foundation` section, you will see the color palette of the light and dark mode.
+For the project:
 
-## Some Tips
+```javascript
+npm run dev
+```
 
-1. Review the designs to start planning how to approach the project. This step is essential for organizing your CSS and components to enhance reusability.
-2. You can include any additional elements you consider necessary to support your solution.
-3. Pay close attention to detail.
-4. Remember that while JavaScript logic is still important, our main focus for this exercise is on styles and components and not paying attention to the business logic and the router. You can hard-code the data provided in `content.txt` into your components.
-5. Since we emphasize styles, please refrain from using Tailwind.
-6. Include all necessary accessibility labels to ensure all users can access the platform.
+For the project:
 
-## Deliverables
+```javascript
+npm run storybook
+```
 
-- Complete project files that work on Chrome, Safari, Firefox, and Edge, along with project documentation. Please deliver everything through a GitHub repository.
+## UI
 
-**Have fun building!**
+These are rough notes from my experience working with different UI libraries, frameworks and projects. Think of this as "my criteria" for both new and existing projects.
+
+You will find breakpoints and their corresponding virtual devices (which you can add from the inspector tools from the browser) along with the media queries that matches and group them for a better maintainability
+
+### Breakpoints and Virtual Devices
+
+#### Mobile
+
+- iPhone 5/SE - 320x568 (design)
+- iPhone 6/7/8 Plus - 414x736
+
+---
+
+- Nexus 7 - 600x960
+
+---
+
+#### Tablet
+
+- iPad Mini - 768x1024
+- iPad Air - 820x1180 (design)
+
+---
+
+- iPad Pro 12.9 - 1024x1366
+
+---
+
+#### Desktop
+
+- MDPI Laptop Screen - 1280x800
+- HiDPI Laptop Screen - 1440x900 (design)
+
+---
+
+- 1080p FHD Screen - 1920x1080
+- 4k UHD Screen - 3840x2160
+
+### Media Queries with Mobile-First approach
+
+- 0px
+- 576px
+- 768px
+- 992px
+- 1200px
+- 1600px
+
+## Changelog
+
+- Add mobile-first on the existing base layout
+- Update design tokens for fonts, colors and gradients
+- Add atomic design structure for components
+- Refactor types outside UI
+- Add main components, atomic design primitives and business logic
+- Add extra component outside the base design
+- Add focus, focus-visible and active pseudo-classes
+- Add keyboard navigation and actions
+- Adjust dark mode theme
+- Add hover states
+- Add Storybook and a sample story
+
+## Next Steps
+
+- Add jest and RTL for unit tests and snapshots tests
+- Add Cypress for E2E, integration and visual flow tests
+- Fine-tune components following atomic design patterns
+- Update design tokens and variants in both Figma and the code
+- Add documentation regarding a11y checks (Axe, Lighthouse, color-contrast-checker, etc)
+- Perform in-depth a11y test (screen readers, keyboard navigation and actions, multi-device support)
+- Fine-tune animations and layout shifting
