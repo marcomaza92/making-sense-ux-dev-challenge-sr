@@ -56,3 +56,6 @@
 - Update design tokens for fonts, colors and gradients
 - Add atomic design structure for components
 - Refactor types outside UI
+- Add main components, atomic design primitives and business logic
+- Add extra component outside the base design
+- Add focus, focus-visible and active pseudo-classes

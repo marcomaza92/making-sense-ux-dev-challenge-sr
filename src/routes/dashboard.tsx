@@ -6,7 +6,7 @@ import data from "../data/data.json";
 
 export const Dashboard = () => {
   return (
-    <section>
+    <section className="dashboard">
       <Cards cards={data.cards as CardProps[]} />
       <Table data={data.orders as ProductProps[]} />
     </section>

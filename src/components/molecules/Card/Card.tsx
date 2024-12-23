@@ -24,7 +24,12 @@ const Card = (props: CardProps) => {
             ))}
         </div>
       </div>
-      <Text tag="h4" type="heading4" weight="bold">
+      <Text
+        tag="h4"
+        type="heading4"
+        weight="bold"
+        className={styles.negativeText}
+      >
         {amount || "-"}
       </Text>
       <div

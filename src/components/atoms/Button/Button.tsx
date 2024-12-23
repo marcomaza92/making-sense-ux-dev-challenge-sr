@@ -6,11 +6,16 @@ import clsx from "clsx";
 const Button = React.forwardRef<
   HTMLButtonElement,
   React.HTMLAttributes<HTMLButtonElement> & ButtonProps
->(({ type, variant, children, ...props }, ref) => {
+>(({ type, variant, className, children, ...props }, ref) => {
   return (
     <button
       ref={ref}
-      className={clsx(styles.button, styles[type ?? ""], styles[variant ?? ""])}
+      className={clsx(
+        className,
+        styles.button,
+        styles[type ?? ""],
+        styles[variant ?? ""]
+      )}
       {...props}
     >
       {children}

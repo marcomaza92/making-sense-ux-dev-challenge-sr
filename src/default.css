@@ -24,6 +24,12 @@ img {
   max-width: 100%;
 }
 
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 @media (min-width: 768px) {
   #root {
     display: grid;

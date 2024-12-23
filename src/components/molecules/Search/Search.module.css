@@ -1,0 +1,37 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  padding-block-end: 1rem;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: 2px solid var(--success-main);
+    outline-offset: 0;
+  }
+}
+
+.searchButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 80px;
+  width: min-content;
+  text-transform: uppercase;
+  color: var(--custom2-text-contrast);
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: 2px solid var(--success-main);
+    outline-offset: 0;
+  }
+}

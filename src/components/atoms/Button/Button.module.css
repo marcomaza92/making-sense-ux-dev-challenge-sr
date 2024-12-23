@@ -43,4 +43,11 @@
   &.success {
     background-color: var(--success-main);
   }
+
+  &.search {
+    background: linear-gradient(
+      var(--gradient-main-start),
+      var(--gradient-main-end)
+    );
+  }
 }

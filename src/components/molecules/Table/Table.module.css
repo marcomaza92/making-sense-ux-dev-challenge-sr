@@ -2,9 +2,10 @@
   border: thin solid var(--neutral-gray-300);
   border-radius: 24px;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
   background-color: var(--neutral-gray-50);
   color: var(--neutral-gray-800);
+  height: 100%;
 }
 
 .tableHeader {
@@ -23,7 +24,7 @@
   margin: 0;
   padding-bottom: 0.5rem;
 
-  &:last-of-type {
+  &.textRight {
     text-align: right;
   }
 }
@@ -44,6 +45,10 @@
 
 .alwaysHidden {
   display: none;
+}
+
+.tableEmptyState {
+  text-align: center;
 }
 
 @media (min-width: 768px) {

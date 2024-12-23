@@ -16,18 +16,10 @@ import Row from "../Row/Row";
 import styles from "./Table.module.css";
 import Text from "../../atoms/Text/Text";
 import Label from "../Label/Label";
-import {
-  CheckCircleIcon,
-  ExclamationTriangleIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
 import clsx from "clsx";
-
-export const statusIcons: Record<string, React.ReactElement> = {
-  pending: <ExclamationTriangleIcon />,
-  rejected: <XMarkIcon />,
-  approved: <CheckCircleIcon />,
-};
+import { statusIcons } from "../../../data/constants";
+import Search from "../Search/Search";
+import EmptyState from "../EmptyState/EmptyState";
 
 const defaultColumns: ColumnDef<ProductProps>[] = [
   {
@@ -78,7 +70,9 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
   {
     header: "Amount",
     accessorKey: "amount",
-    meta: { className: styles.hiddenOnMobileAndTablet },
+    meta: {
+      className: `${styles.hiddenOnMobileAndTablet} ${styles.textRight}`,
+    },
     cell: (info) => (
       <div className={styles.tableCellContent}>
         <Text tag="p" type="body2" weight="bold">
@@ -112,8 +106,10 @@ const defaultColumns: ColumnDef<ProductProps>[] = [
 export const Table = (props: TableProps) => {
   const { data: initialData } = props;
   const [data, setData] = useState(initialData);
+  const [searchValue, setSearchValue] = useState("");
   const [columns] = React.useState(() => [...defaultColumns]);
   const [sorting, setSorting] = React.useState<SortingState>([]);
+
   const handleStatusUpdate = (id: number, newStatus: ProductStatusProps) => {
     setData((prevData) =>
       prevData.map((item) =>
@@ -133,6 +129,16 @@ export const Table = (props: TableProps) => {
     onSortingChange: setSorting,
   });
 
+  const handleSearchChange = (value: string) => {
+    setSearchValue(value);
+  };
+
+  const filteredData = table
+    .getRowModel()
+    .rows.filter((item) =>
+      item.original.customer.toLowerCase().includes(searchValue.toLowerCase())
+    );
+
   return (
     <div className={styles.tableContainer}>
       <div className={styles.tableHeader}>
@@ -143,40 +149,49 @@ export const Table = (props: TableProps) => {
           Recent transactions from your store.
         </Text>
       </div>
-      <table className={styles.tableContent}>
-        <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr className={styles.tableHeaderRow} key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
-                <th
-                  key={header.id}
-                  colSpan={header.colSpan}
-                  onClick={header.column.getToggleSortingHandler()}
-                  className={clsx(
-                    styles.tableHeaderCell,
-                    (header.column.columnDef.meta as { className?: string })
-                      ?.className
-                  )}
-                >
-                  <Text tag="p" type="caption" weight="medium">
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                  </Text>
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <Row key={row.id} row={row} onStatusUpdate={handleStatusUpdate} />
-          ))}
-        </tbody>
-      </table>
+      <div className={styles.tableSearch}>
+        <Search onSearchChange={handleSearchChange} />
+      </div>
+      {filteredData.length === 0 ? (
+        <div className={styles.tableEmptyState}>
+          <EmptyState type="transactions" />
+        </div>
+      ) : (
+        <table className={styles.tableContent}>
+          <thead>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr className={styles.tableHeaderRow} key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
+                  <th
+                    key={header.id}
+                    colSpan={header.colSpan}
+                    onClick={header.column.getToggleSortingHandler()}
+                    className={clsx(
+                      styles.tableHeaderCell,
+                      (header.column.columnDef.meta as { className?: string })
+                        ?.className
+                    )}
+                  >
+                    <Text tag="p" type="caption" weight="medium">
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </Text>
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {filteredData.map((row) => (
+              <Row key={row.id} row={row} onStatusUpdate={handleStatusUpdate} />
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

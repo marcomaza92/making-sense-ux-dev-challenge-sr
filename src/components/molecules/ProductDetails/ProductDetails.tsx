@@ -8,10 +8,10 @@ import { Cell } from "@tanstack/react-table";
 import { ProductProps } from "../Table/Table.types";
 import Button from "../../atoms/Button/Button";
 import Label from "../Label/Label";
-import { statusIcons } from "../Table/Table";
 import clsx from "clsx";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
+import { statusIcons } from "../../../data/constants";
 
 const ProductDetails = (props: ProductDetailsProps) => {
   const { row, onStatusUpdate } = props;
